@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {TopicsComponent} from './pages/topics/topics.component';
-import {QuestionsComponent} from './pages/questions/questions.component';
 import {QuestionComponent} from './pages/question/question.component';
+import {QuestionListComponent} from './pages/question-list/question-list.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'questions',
-    component: QuestionsComponent
+    component: QuestionListComponent
   },
   {
     path: 'question/:id',
