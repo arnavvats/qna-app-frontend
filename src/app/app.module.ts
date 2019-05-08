@@ -7,6 +7,7 @@ import { TopicsComponent } from './pages/topics/topics.component';
 import { QuestionsComponent } from './pages/questions/questions.component';
 import { QuestionPreviewComponent } from './shared/components/question-preview/question-preview.component';
 import { TopicPreviewComponent } from './shared/components/topic-preview/topic-preview.component';
+import { QuestionComponent } from './pages/question/question.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TopicPreviewComponent } from './shared/components/topic-preview/topic-p
     TopicsComponent,
     QuestionsComponent,
     QuestionPreviewComponent,
-    TopicPreviewComponent
+    TopicPreviewComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
