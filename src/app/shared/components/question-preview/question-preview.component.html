@@ -1,3 +1,13 @@
-<p>
-  question-preview works!
-</p>
+<div class="q-preview p-2">
+  <div class="tag-info d-inline-flex align-items-center">
+   <p *ngFor="let topic of data.topics">{{topic.text}}</p>
+  </div>
+  <div class="text-dark">
+    {{data.question.text}}
+  </div>
+  <div class="d-inline-flex align-items-center">
+    <p class="text-black-50 m-0">{{data.question.answer_ids.length}} answers</p>
+    <span class="dot ml-2 mr-2" *ngIf="hasAnswered()"></span>
+    <p class="text-black-50 m-0" *ngIf="hasAnswered()">You've answered</p>
+  </div>
+</div>

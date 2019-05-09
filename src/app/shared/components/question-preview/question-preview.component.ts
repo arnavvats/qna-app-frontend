@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-question-preview',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question-preview.component.scss']
 })
 export class QuestionPreviewComponent implements OnInit {
-
-  constructor() { }
+  @Input() data: any;
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
+  }
+
+  hasAnswered() {
+    return this.auth.user && this.data.question.answer_ids.indexOf(this.auth.user._id) !== -1;
   }
 
 }

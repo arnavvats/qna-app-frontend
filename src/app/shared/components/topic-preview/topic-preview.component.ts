@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-topic-preview',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic-preview.component.scss']
 })
 export class TopicPreviewComponent implements OnInit {
-
+  @Input() title: string;
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,21 @@
+:host {
+  width: 100%;
+  padding: 0.5rem;
+  .q-preview {
+    border: 1px solid #5b5b5b;
+    border-radius: 10px;
+    &:hover {
+      box-shadow: 5px 5px;
+      cursor: pointer;
+    }
+  }
+  .tag-info p {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    color: white;
+    background: #1E88E5;
+    margin: 0 0.5rem 0 0;
+    border-radius: 1rem;
+  }
+}
+
