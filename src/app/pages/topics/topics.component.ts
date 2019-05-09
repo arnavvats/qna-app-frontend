@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-topics',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopicsComponent implements OnInit {
 
-  constructor() { }
+  topics: Array<any>;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    const data = this.route.snapshot.data.resolved;
+    this.topics = data.topics;
   }
 
 }

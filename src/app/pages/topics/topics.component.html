@@ -1,3 +1,14 @@
-<p>
-  topics works!
-</p>
+<main>
+  <div class="text-center mt-5 mb-5">
+    <p>
+      Here is the list of all topics!
+    </p>
+    <p>
+      Choose a topic to see questions
+    </p>
+  </div>
+  <div class="topic-list">
+    <app-topic-preview *ngFor="let topic of topics" routerLink="/questions" [queryParams]="{topic_id: topic._id}" [title]="topic.text"></app-topic-preview>
+  </div>
+</main>
+
