@@ -1,3 +1,17 @@
-<p>
-  question works!
-</p>
+<main>
+  <div class="q mb-5">
+    <p class="font-weight-bold q-text mb-1">{{question.text}}</p>
+      <p class="text-black-50 d-inline m-0">{{askedBy.name}}</p>
+  </div>
+  <div class="user-ans d-flex flex-column align-items-end" *ngIf="!hasAnswered && auth.user">
+    <textarea placeholder="write you answer..." rows="5" class="form-control mb-1" [(ngModel)]="answerText"></textarea>
+    <button class="btn btn-primary" (click)="submitAnswer()">Submit</button>
+  </div>
+  <p class="font-weight-bold border-bottom mb-4">{{answeredBy.length}} Answers</p>
+  <div class="other-ans mb-4 border-bottom" *ngFor="let ans of answeredBy">
+    <p class="mb-0 font-weight-bold">{{ans.user.name}}</p>
+    <i class="fa fa-check verified mr-1" *ngIf="ans.answer.status === 'verified'" title="Verified"></i>
+    <i class="fa fa-search-plus under-review mr-1" *ngIf="ans.answer.status === 'under_review'" title="Under Review"></i>
+    <p class="mb-1 d-inline">{{ans.answer.text}}</p>
+  </div>
+</main>
