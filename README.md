@@ -1,6 +1,13 @@
-# QnaAppFrontend
+# Qna App Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This is the frontend part of a skeletal QnA app whose backend repository is https://github.com/arnavvats/qna-app-frontend
+
+After installing and running the backend server, clone this repo and run `ng serve`
+
+The pages `/topics` and `/questions` provide you with a list of topics and questions respectively.
+
+**When clicking on a question, you can see the verified responses to this question and answer yourself if you're logged in , have not previously answered, and have not asked the question.**
 
 ## Development server
 
