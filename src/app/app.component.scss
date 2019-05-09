@@ -1,0 +1,10 @@
+div {
+  padding: 10px 20px;
+  min-height: 92vh;
+  @media (min-width: 768px) {
+    margin: 0 20%;
+  }
+}
+app-footer {
+  height: auto;
+}
