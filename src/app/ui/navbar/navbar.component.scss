@@ -1,0 +1,8 @@
+nav {
+  padding-left: 30px;
+  li {
+    & a.active {
+      border-bottom: 2px solid;
+    }
+  }
+}
