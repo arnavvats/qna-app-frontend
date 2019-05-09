@@ -1,3 +1,3 @@
-<p>
-  question-list works!
-</p>
+<main>
+  <app-question-preview *ngFor="let questionDetail of questions" [routerLink]="'/question/' + questionDetail.question._id" [data]="questionDetail"></app-question-preview>
+</main>
